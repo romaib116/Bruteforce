@@ -1,32 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.Threading;
 
 namespace Bruteforce
 {
     class Program
     {
-        public const string variables = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        public const string alphabet = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 
-
-        public static void BruteForce(string symbols, int numOfSymbols)
+        public static void BruteForce(string characters, int numOfCharacters)
         {
-            if (numOfSymbols < 1)
+            if (numOfCharacters < 1)
             {
-                for (int i = 0; i < variables.Length; i++)
+                for (int i = 0; i < alphabet.Length; i++)
                 {
-                    Console.WriteLine(symbols + variables[i]);
+                    Console.WriteLine(characters + alphabet[i]);
                 }
             }
-            if (numOfSymbols >= 1)
+            if (numOfCharacters >= 1)
             {
-                for (int i = 0; i < variables.Length; i++)
+                for (int i = 0; i < alphabet.Length; i++)
                 {
-                    BruteForce(symbols + variables[i], numOfSymbols - 1);
+                    BruteForce(characters + alphabet[i], numOfCharacters - 1);
                 }
             }
         }
