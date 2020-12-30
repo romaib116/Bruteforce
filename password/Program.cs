@@ -6,7 +6,7 @@ namespace Bruteforce
 {
     class Program
     {
-        public const string alphabet = "0123456789qwertyuiopasdfghjklzxcvbnm";
+        public const string alphabet = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
         public const string password = "alina";
         public static bool hacked = false;
 
